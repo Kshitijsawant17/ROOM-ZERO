@@ -1,0 +1,61 @@
+{
+  "max_per_mission": { "easy": 2, "normal": 3, "hard": 3 },
+  "max_per_anchor": 1,
+  "puzzles": [
+    {
+      "id": "code_pad",
+      "prefab": "HoloCodePad",
+      "surfaces": ["desk", "table"],
+      "hands": ["pinch", "poke"],
+      "params": {
+        "code_length": { "min": 3, "max": 4, "default": 4 },
+        "attempts": { "min": 1, "max": 3, "default": 2 }
+      }
+    },
+    {
+      "id": "wire",
+      "prefab": "HoloWire",
+      "surfaces": ["shelf", "wall"],
+      "hands": ["pinch", "grab"],
+      "params": {
+        "links": { "min": 2, "max": 4, "default": 3 }
+      }
+    },
+    {
+      "id": "map_align",
+      "prefab": "HoloMap",
+      "surfaces": ["table"],
+      "hands": ["grab"],
+      "params": {
+        "snap_degrees": { "min": 8, "max": 20, "default": 12 }
+      }
+    },
+    {
+      "id": "circuit",
+      "prefab": "HoloCircuit",
+      "surfaces": ["wall"],
+      "hands": ["poke"],
+      "params": {
+        "nodes": { "min": 3, "max": 5, "default": 4 }
+      }
+    },
+    {
+      "id": "token",
+      "prefab": "HoloToken",
+      "surfaces": ["desk", "table", "shelf", "window"],
+      "hands": ["pinch"],
+      "params": {
+        "hold_s": { "min": 0.4, "max": 1.5, "default": 0.8 }
+      }
+    },
+    {
+      "id": "marker",
+      "prefab": "HoloMarker",
+      "surfaces": ["floor"],
+      "hands": ["poke"],
+      "params": {
+        "count": { "min": 2, "max": 4, "default": 3 }
+      }
+    }
+  ]
+}

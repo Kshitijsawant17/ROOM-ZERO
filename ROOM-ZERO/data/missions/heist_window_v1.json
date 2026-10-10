@@ -1,0 +1,20 @@
+{
+  "id": "heist_window_v1",
+  "title": "Ghost at the Window",
+  "seed": 7711,
+  "duration_s": 160,
+  "difficulty": "hard",
+  "objective": "Trace the wall circuit and extract through the window ghost.",
+  "beats": [
+    { "id": "intro", "kind": "intro", "text": "ZERO: Different geometry. Same you." },
+    { "id": "puzzle", "kind": "puzzle", "text": "Circuit on the north wall." },
+    { "id": "extract", "kind": "extraction", "text": "Window is the door now." }
+  ],
+  "placements": [
+    { "prefab": "HoloCircuit", "surface_id": "wall_n", "puzzle_id": "circuit_wall_n" },
+    { "prefab": "HoloToken", "surface_id": "window_a", "puzzle_id": "token_window_a" }
+  ],
+  "npcs": [{ "id": "zero", "name": "ZERO", "role": "director" }],
+  "fail_states": ["timer", "alarm"],
+  "memory_hooks": ["used_window_as_exit"]
+}

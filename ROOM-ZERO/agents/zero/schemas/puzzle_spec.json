@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PuzzleSpec",
+  "type": "object",
+  "required": ["puzzle_id", "puzzle_type", "prefab", "target_anchor_id", "params"],
+  "properties": {
+    "puzzle_id": { "type": "string" },
+    "puzzle_type": { "type": "string" },
+    "prefab": { "type": "string" },
+    "target_anchor_id": { "type": "string" },
+    "surface_id": { "type": "string" },
+    "params": { "type": "object" },
+    "requires": { "type": ["string", "null"] }
+  },
+  "not": {
+    "properties": {
+      "params": {
+        "type": "object",
+        "anyOf": [
+          { "required": ["x"] },
+          { "required": ["y"] },
+          { "required": ["z"] },
+          { "required": ["position"] }
+        ]
+      }
+    }
+  }
+}

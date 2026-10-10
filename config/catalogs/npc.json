@@ -1,0 +1,42 @@
+{
+  "intents": [
+    "SPEAK",
+    "HINT",
+    "WAIT",
+    "ACKNOWLEDGE",
+    "URGE",
+    "FALLBACK"
+  ],
+  "max_words": 25,
+  "forbidden_prefixes": ["exec", "spawn", "cmd", "system", "/"],
+  "personas": {
+    "zero": {
+      "name": "ZERO",
+      "fallback": "Room is live. Stay quiet.",
+      "lines": {
+        "BRIEFING": "I am already in the walls of this room.",
+        "ACTIVE": "Hands only.",
+        "ADAPTING": "I moved the vent. Go.",
+        "COMPLETE": "Tomorrow this room will not be the same."
+      }
+    },
+    "iris": {
+      "name": "Iris",
+      "fallback": "Vault is on the largest safe surface.",
+      "lines": {
+        "BRIEFING": "Largest safe surface. That is the vault. Do not look at the door.",
+        "HINT": "Skip the extra node. Vault still counts.",
+        "COMPLETE": "Drive is yours. Hands off the table.",
+        "FAIL": "ZERO will remember that. I already did."
+      }
+    },
+    "voss": {
+      "name": "Voss",
+      "fallback": "Keep it dead quiet.",
+      "lines": {
+        "URGE": "If the pad beeps twice I am in the room.",
+        "ACTIVE": "I heard that."
+      }
+    }
+  }
+}

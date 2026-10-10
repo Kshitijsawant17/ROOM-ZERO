@@ -1,0 +1,11 @@
+{
+  "puzzles": [
+    { "id": "code_pad", "prefab": "HoloCodePad", "surfaces": ["desk", "table"], "hands": ["pinch", "poke"] },
+    { "id": "wire", "prefab": "HoloWire", "surfaces": ["shelf", "wall"], "hands": ["pinch", "grab"] },
+    { "id": "map_align", "prefab": "HoloMap", "surfaces": ["table", "floor"], "hands": ["grab"] },
+    { "id": "circuit", "prefab": "HoloCircuit", "surfaces": ["wall"], "hands": ["poke"] },
+    { "id": "marker", "prefab": "HoloMarker", "surfaces": ["floor"], "hands": ["poke"] },
+    { "id": "token", "prefab": "HoloToken", "surfaces": ["desk", "table", "shelf", "window"], "hands": ["pinch"] },
+    { "id": "keycard", "prefab": "HoloKeycard", "surfaces": ["door", "desk"], "hands": ["grab", "pinch"] }
+  ]
+}

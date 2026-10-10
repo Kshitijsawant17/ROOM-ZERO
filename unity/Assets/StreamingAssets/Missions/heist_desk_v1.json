@@ -1,0 +1,13 @@
+{
+  "id": "heist_desk_v1",
+  "title": "Vault on the Desk",
+  "seed": 2046,
+  "duration_s": 180,
+  "difficulty": "normal",
+  "objective": "Crack the desk vault and extract the drive.",
+  "placements": [
+    { "prefab": "HoloCodePad", "surface_id": "desk_a", "puzzle_id": "code_pad_desk_a" },
+    { "prefab": "HoloWire", "surface_id": "shelf_a", "puzzle_id": "wire_shelf_a" },
+    { "prefab": "HoloMap", "surface_id": "table_a", "puzzle_id": "map_align_table_a" }
+  ]
+}

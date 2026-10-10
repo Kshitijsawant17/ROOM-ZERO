@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RoomGraph",
+  "type": "object",
+  "required": ["room_id", "bounds", "surfaces", "volumes"],
+  "properties": {
+    "room_id": { "type": "string" },
+    "scanned_at": { "type": "string" },
+    "bounds": {
+      "type": "object",
+      "required": ["width_m", "depth_m", "height_m"],
+      "properties": {
+        "width_m": { "type": "number" },
+        "depth_m": { "type": "number" },
+        "height_m": { "type": "number" }
+      }
+    },
+    "surfaces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "area_m2", "anchor_id"],
+        "properties": {
+          "id": { "type": "string" },
+          "kind": {
+            "type": "string",
+            "enum": ["desk", "table", "floor", "wall", "shelf", "door", "window", "chair", "other"]
+          },
+          "area_m2": { "type": "number" },
+          "height_m": { "type": "number" },
+          "anchor_id": { "type": "string" },
+          "safe": { "type": "boolean" }
+        }
+      }
+    },
+    "volumes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind"],
+        "properties": {
+          "id": { "type": "string" },
+          "kind": { "type": "string", "enum": ["open", "blocked", "playable"] },
+          "volume_m3": { "type": "number" }
+        }
+      }
+    },
+    "hazards": {
+      "type": "array",
+      "items": { "type": "object" }
+    }
+  }
+}

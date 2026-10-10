@@ -1,0 +1,11 @@
+{
+  "id": "guard",
+  "name": "Voss",
+  "role": "patrol",
+  "style": "short, threatening, never names the player",
+  "lines": {
+    "intro": "If the pad beeps twice I am in the room.",
+    "alarm": "I heard that.",
+    "clear": "Keep it dead quiet."
+  }
+}

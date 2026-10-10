@@ -1,0 +1,23 @@
+{
+  "device": "Quest3",
+  "passthrough": true,
+  "hand_tracking": true,
+  "controllers_allowed": false,
+  "scene_understanding": true,
+  "spatial_anchors": true,
+  "interaction": {
+    "pinch_select": true,
+    "poke": true,
+    "grab": true,
+    "voice": true
+  },
+  "audio": {
+    "spatial": true,
+    "zero_voice_id": "zero_en_low"
+  },
+  "safety": {
+    "guardian_required": true,
+    "reject_stairs": true,
+    "reject_glass_as_floor": true
+  }
+}

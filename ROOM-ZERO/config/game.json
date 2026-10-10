@@ -1,0 +1,21 @@
+{
+  "title": "ROOM//ZERO",
+  "tagline": "Your Room is Not a Level. Your Room is the Game Engine.",
+  "hands_only": true,
+  "voice_wake": "ZERO",
+  "default_mission_seconds": 180,
+  "min_playable_area_m2": 4.0,
+  "hologram_max_per_surface": 3,
+  "difficulty": {
+    "easy": { "timer_mult": 1.4, "npc_alert": 0.3, "hint_delay_s": 20 },
+    "normal": { "timer_mult": 1.0, "npc_alert": 0.55, "hint_delay_s": 35 },
+    "hard": { "timer_mult": 0.75, "npc_alert": 0.8, "hint_delay_s": 55 }
+  },
+  "mission_types": [
+    "desk_vault",
+    "shelf_wire",
+    "door_ghost",
+    "table_map",
+    "window_extract"
+  ]
+}

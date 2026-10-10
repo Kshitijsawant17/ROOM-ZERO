@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MissionPlan",
+  "type": "object",
+  "required": ["template_id", "theme", "objective_ids", "difficulty", "duration_s", "primary_anchor_id"],
+  "properties": {
+    "template_id": { "type": "string" },
+    "theme": { "type": "string" },
+    "objective_ids": { "type": "array", "items": { "type": "string" } },
+    "difficulty": { "type": "string", "enum": ["easy", "normal", "hard"] },
+    "duration_s": { "type": "integer", "minimum": 120, "maximum": 240 },
+    "primary_anchor_id": { "type": "string" }
+  }
+}

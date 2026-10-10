@@ -1,0 +1,12 @@
+{
+  "id": "zero",
+  "name": "ZERO",
+  "role": "director",
+  "style": "calm, short, spatial",
+  "lines": {
+    "wake": "Room is live.",
+    "mission": "I am already in the walls of this room.",
+    "adapt": "I moved the vent. Go.",
+    "end": "Tomorrow this room will not be the same."
+  }
+}

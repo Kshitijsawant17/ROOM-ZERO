@@ -1,0 +1,19 @@
+{
+  "room_id": "sample_bedroom",
+  "scanned_at": "2026-10-10T00:00:00Z",
+  "bounds": { "width_m": 4.2, "depth_m": 3.6, "height_m": 2.5 },
+  "surfaces": [
+    { "id": "desk_a", "kind": "desk", "area_m2": 1.2, "height_m": 0.75, "anchor_id": "a1", "safe": true, "confidence": 0.92 },
+    { "id": "table_a", "kind": "table", "area_m2": 1.8, "height_m": 0.72, "anchor_id": "a2", "safe": true, "confidence": 0.9 },
+    { "id": "shelf_a", "kind": "shelf", "area_m2": 0.4, "height_m": 1.4, "anchor_id": "a3", "safe": true, "confidence": 0.84 },
+    { "id": "wall_n", "kind": "wall", "area_m2": 8.0, "height_m": 2.5, "anchor_id": "a4", "safe": true, "confidence": 0.88 },
+    { "id": "window_a", "kind": "window", "area_m2": 1.1, "height_m": 1.2, "anchor_id": "a5", "safe": true, "confidence": 0.8 },
+    { "id": "floor_a", "kind": "floor", "area_m2": 15.1, "height_m": 0.0, "anchor_id": "a6", "safe": true, "confidence": 0.86 },
+    { "id": "door_a", "kind": "door", "area_m2": 1.8, "height_m": 2.1, "anchor_id": "a7", "safe": true, "confidence": 0.95 }
+  ],
+  "volumes": [
+    { "id": "open_center", "kind": "open", "volume_m3": 12.0 },
+    { "id": "bed_block", "kind": "blocked", "volume_m3": 3.2 }
+  ],
+  "hazards": []
+}

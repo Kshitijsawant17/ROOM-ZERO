@@ -1,0 +1,60 @@
+{
+  "room_scout": {
+    "exclude_kinds": ["door", "stairs", "stair", "edge"],
+    "exclude_volume_kinds": ["blocked"],
+    "edge_margin_m": 0.15,
+    "min_confidence": 0.5,
+    "min_area_m2": 0.15,
+    "never_infer_hazards": true,
+    "unknown_if_missing_confidence": true
+  },
+  "game_director": {
+    "duration_s": { "min": 120, "max": 240 },
+    "difficulty_rank": { "easy": 0, "normal": 1, "hard": 2 },
+    "difficulty_cooldown_sessions": 1,
+    "never_make_safety_harder": true,
+    "catalog_only": true
+  },
+  "puzzle_architect": {
+    "allow_coordinates": false,
+    "require_anchor_id": true,
+    "max_objects": 3,
+    "catalog_params_only": true
+  },
+  "npc_agent": {
+    "max_words": 25,
+    "intents_only": true,
+    "no_command_execution": true
+  },
+  "player_model": {
+    "allowlist": [
+      "id",
+      "sessions",
+      "wins",
+      "fails",
+      "pace",
+      "retries",
+      "hints",
+      "style",
+      "favorite_surface",
+      "suggested_difficulty",
+      "last_duration_s",
+      "history"
+    ],
+    "forbid": [
+      "name",
+      "email",
+      "voice",
+      "photo",
+      "mesh",
+      "raw_room",
+      "location",
+      "device_id"
+    ]
+  },
+  "adaptation": {
+    "one_proposal": true,
+    "cooldown_s": 25,
+    "never_make_safety_harder": true
+  }
+}

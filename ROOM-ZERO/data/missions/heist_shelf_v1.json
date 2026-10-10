@@ -1,0 +1,24 @@
+{
+  "id": "heist_shelf_v1",
+  "title": "Quiet Work on the shelf",
+  "seed": 4410,
+  "duration_s": 180,
+  "difficulty": "normal",
+  "objective": "Rewire the shelf node before the alarm cycles.",
+  "primary_kind": "shelf",
+  "beats": [
+    { "id": "intro", "kind": "intro", "text": "ZERO: Shelf is live. Stay quiet." },
+    { "id": "puzzle", "kind": "puzzle", "text": "Three links. No sparks." },
+    { "id": "extract", "kind": "extraction", "text": "Node is yours." }
+  ],
+  "placements": [
+    { "prefab": "HoloWire", "surface_id": "shelf_a", "puzzle_id": "wire_shelf_a", "puzzle_type": "wire" },
+    { "prefab": "HoloCodePad", "surface_id": "desk_a", "puzzle_id": "code_pad_desk_a", "puzzle_type": "code_pad", "requires": "wire_shelf_a" }
+  ],
+  "npcs": [
+    { "id": "zero", "name": "ZERO", "role": "director" },
+    { "id": "handler", "name": "Iris", "role": "handler" }
+  ],
+  "fail_states": ["timer", "alarm"],
+  "memory_hooks": ["used_shelf_as_vault"]
+}

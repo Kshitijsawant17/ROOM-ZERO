@@ -1,0 +1,25 @@
+{
+  "kinds": [
+    "HINT_BEAM",
+    "EASE_TIMER",
+    "SKIP_OPTIONAL",
+    "LOWER_DIFFICULTY"
+  ],
+  "forbidden_kinds": [
+    "DISABLE_GUARDIAN",
+    "RAISE_HAZARD",
+    "SPAWN_UNBOUNDED",
+    "SHORTEN_SAFETY_MARGIN",
+    "ALLOW_EXCLUDED_ZONE"
+  ],
+  "cooldown_s": 25,
+  "max_per_mission": 2,
+  "magnitudes": {
+    "EASE_TIMER": { "min": 5, "max": 20, "default": 15 },
+    "HINT_BEAM": { "min": 1, "max": 1, "default": 1 },
+    "SKIP_OPTIONAL": { "min": 1, "max": 1, "default": 1 },
+    "LOWER_DIFFICULTY": { "min": 1, "max": 1, "default": 1 }
+  },
+  "stuck_s": 25,
+  "never_make_safety_harder": true
+}

@@ -1,0 +1,40 @@
+{
+  "plan": {
+    "template_id": "wall_circuit",
+    "theme": "circuit",
+    "title": "Ghost on the Wall",
+    "objective_ids": [
+      "trace_circuit",
+      "extract_drive"
+    ],
+    "difficulty": "normal",
+    "duration_s": 160,
+    "seed": 1397006,
+    "primary_anchor_id": "a4",
+    "primary_kind": "wall"
+  },
+  "puzzles": [
+    {
+      "puzzle_id": "circuit_wall_n",
+      "puzzle_type": "circuit",
+      "prefab": "HoloCircuit",
+      "target_anchor_id": "a4",
+      "surface_id": "wall_n",
+      "params": {
+        "nodes": 4
+      },
+      "requires": null
+    },
+    {
+      "puzzle_id": "token_table_a",
+      "puzzle_type": "token",
+      "prefab": "HoloToken",
+      "target_anchor_id": "a2",
+      "surface_id": "table_a",
+      "params": {
+        "hold_s": 0.8
+      },
+      "requires": "circuit_wall_n"
+    }
+  ]
+}

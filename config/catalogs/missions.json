@@ -1,0 +1,67 @@
+{
+  "templates": [
+    {
+      "id": "desk_vault",
+      "theme": "vault",
+      "title": "Vault on the Desk",
+      "objective_ids": ["crack_vault", "extract_drive"],
+      "required_kinds": ["desk", "table"],
+      "puzzle_ids": ["code_pad", "wire"],
+      "duration_s": { "min": 120, "max": 210, "default": 180 },
+      "difficulty": ["easy", "normal", "hard"]
+    },
+    {
+      "id": "shelf_wire",
+      "theme": "node",
+      "title": "Quiet Work on the Shelf",
+      "objective_ids": ["rewire_node", "extract_drive"],
+      "required_kinds": ["shelf"],
+      "puzzle_ids": ["wire", "code_pad"],
+      "duration_s": { "min": 120, "max": 210, "default": 180 },
+      "difficulty": ["easy", "normal", "hard"]
+    },
+    {
+      "id": "table_map",
+      "theme": "map",
+      "title": "Map on the Table",
+      "objective_ids": ["align_map", "mark_exit"],
+      "required_kinds": ["table"],
+      "puzzle_ids": ["map_align", "token"],
+      "duration_s": { "min": 140, "max": 220, "default": 200 },
+      "difficulty": ["easy", "normal"]
+    },
+    {
+      "id": "wall_circuit",
+      "theme": "circuit",
+      "title": "Ghost on the Wall",
+      "objective_ids": ["trace_circuit", "extract_drive"],
+      "required_kinds": ["wall"],
+      "puzzle_ids": ["circuit", "token"],
+      "duration_s": { "min": 120, "max": 180, "default": 160 },
+      "difficulty": ["normal", "hard"]
+    },
+    {
+      "id": "window_extract",
+      "theme": "ghost_pane",
+      "title": "Ghost at the Window",
+      "objective_ids": ["spoof_sensor", "extract_window"],
+      "required_kinds": ["window", "wall"],
+      "puzzle_ids": ["token", "circuit"],
+      "duration_s": { "min": 120, "max": 180, "default": 160 },
+      "difficulty": ["normal", "hard"]
+    }
+  ],
+  "objective_types": [
+    "crack_vault",
+    "extract_drive",
+    "rewire_node",
+    "align_map",
+    "mark_exit",
+    "trace_circuit",
+    "spoof_sensor",
+    "extract_window"
+  ],
+  "themes": ["vault", "node", "map", "circuit", "ghost_pane"],
+  "difficulty": ["easy", "normal", "hard"],
+  "duration_s": { "min": 120, "max": 240 }
+}

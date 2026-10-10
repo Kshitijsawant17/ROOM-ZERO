@@ -1,0 +1,27 @@
+{
+  "id": "heist_desk_v1",
+  "title": "Vault on the Desk",
+  "seed": 2046,
+  "duration_s": 180,
+  "difficulty": "normal",
+  "objective": "Crack the desk vault and extract the drive.",
+  "beats": [
+    { "id": "intro", "kind": "intro", "text": "ZERO: Room is live. Stay quiet." },
+    { "id": "infiltrate", "kind": "infiltrate", "text": "Iris: Largest flat surface. That is the vault." },
+    { "id": "puzzle", "kind": "puzzle", "text": "Enter 2046. Rewire the shelf if the pad locks." },
+    { "id": "npc", "kind": "npc", "text": "Do not look at the door." },
+    { "id": "extract", "kind": "extraction", "text": "Drive is yours. Hands off the table." },
+    { "id": "epilogue", "kind": "epilogue", "text": "ZERO stored this room. Tomorrow it will not be the same." }
+  ],
+  "placements": [
+    { "prefab": "HoloCodePad", "surface_id": "desk_a", "puzzle_id": "code_pad_desk_a" },
+    { "prefab": "HoloWire", "surface_id": "shelf_a", "puzzle_id": "wire_shelf_a" },
+    { "prefab": "HoloMap", "surface_id": "table_a", "puzzle_id": "map_align_table_a" }
+  ],
+  "npcs": [
+    { "id": "zero", "name": "ZERO", "role": "director" },
+    { "id": "handler", "name": "Iris", "role": "handler" }
+  ],
+  "fail_states": ["timer", "alarm", "leave_guardian"],
+  "memory_hooks": ["met_iris", "used_desk_as_vault"]
+}

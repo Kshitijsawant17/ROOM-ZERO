@@ -1,0 +1,12 @@
+{
+  "id": "handler",
+  "name": "Iris",
+  "role": "handler",
+  "style": "dry, precise, never jokes twice",
+  "lines": {
+    "intro": "Vault is on the largest flat surface. Do not look at the door.",
+    "stuck": "You froze last time. I shortened the lock. Move.",
+    "win": "Drive is yours. Hands off the table.",
+    "fail": "ZERO will remember that. I already did."
+  }
+}

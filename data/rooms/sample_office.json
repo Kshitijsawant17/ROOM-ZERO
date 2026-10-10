@@ -1,0 +1,19 @@
+{
+  "room_id": "sample_office",
+  "scanned_at": "2026-10-10T00:00:00Z",
+  "bounds": { "width_m": 5.1, "depth_m": 4.0, "height_m": 2.7 },
+  "surfaces": [
+    { "id": "desk_l", "kind": "desk", "area_m2": 1.6, "height_m": 0.74, "anchor_id": "o1", "safe": true, "confidence": 0.93 },
+    { "id": "desk_r", "kind": "desk", "area_m2": 1.1, "height_m": 0.74, "anchor_id": "o2", "safe": true, "confidence": 0.9 },
+    { "id": "table_meet", "kind": "table", "area_m2": 2.4, "height_m": 0.73, "anchor_id": "o3", "safe": true, "confidence": 0.91 },
+    { "id": "shelf_b", "kind": "shelf", "area_m2": 0.6, "height_m": 1.6, "anchor_id": "o4", "safe": true, "confidence": 0.82 },
+    { "id": "wall_e", "kind": "wall", "area_m2": 10.2, "height_m": 2.7, "anchor_id": "o5", "safe": true, "confidence": 0.88 },
+    { "id": "door_a", "kind": "door", "area_m2": 1.8, "height_m": 2.1, "anchor_id": "o6", "safe": true, "confidence": 0.95 },
+    { "id": "floor_a", "kind": "floor", "area_m2": 20.4, "height_m": 0.0, "anchor_id": "o7", "safe": true, "confidence": 0.87 }
+  ],
+  "volumes": [
+    { "id": "open_center", "kind": "open", "volume_m3": 22.0 },
+    { "id": "chair_block", "kind": "blocked", "volume_m3": 1.4 }
+  ],
+  "hazards": []
+}

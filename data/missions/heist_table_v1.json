@@ -1,0 +1,24 @@
+{
+  "id": "heist_table_v1",
+  "title": "Map on the Table",
+  "seed": 9081,
+  "duration_s": 200,
+  "difficulty": "easy",
+  "objective": "Reassemble the map on the table and mark the exit.",
+  "primary_kind": "table",
+  "beats": [
+    { "id": "intro", "kind": "intro", "text": "ZERO: Table is the city tonight." },
+    { "id": "puzzle", "kind": "puzzle", "text": "Rotate until north clicks." },
+    { "id": "extract", "kind": "extraction", "text": "Exit marked. Hands off." }
+  ],
+  "placements": [
+    { "prefab": "HoloMap", "surface_id": "table_a", "puzzle_id": "map_align_table_a", "puzzle_type": "map_align" },
+    { "prefab": "HoloToken", "surface_id": "desk_a", "puzzle_id": "token_desk_a", "puzzle_type": "token", "requires": "map_align_table_a" }
+  ],
+  "npcs": [
+    { "id": "zero", "name": "ZERO", "role": "director" },
+    { "id": "handler", "name": "Iris", "role": "handler" }
+  ],
+  "fail_states": ["timer"],
+  "memory_hooks": ["used_table_as_map"]
+}

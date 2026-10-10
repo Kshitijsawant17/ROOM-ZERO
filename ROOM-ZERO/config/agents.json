@@ -1,0 +1,15 @@
+{
+  "orchestrator": {
+    "free_running": false,
+    "one_specialist_per_state": true,
+    "state_machine": "config/state_machine.json"
+  },
+  "agents": [
+    { "id": "room_scout", "state": "ROOM_READY", "timeout_ms": 400, "input": "RoomSceneInput", "output": "RoomMap" },
+    { "id": "player_model", "state": ["MISSION_REQUESTED", "SAVING"], "timeout_ms": 200, "input": "SessionEvent", "output": "PlayerProfile" },
+    { "id": "game_director", "state": "PLANNING", "timeout_ms": 600, "input": "RoomMap+PlayerProfile", "output": "MissionPlan" },
+    { "id": "puzzle_architect", "state": "VALIDATING", "timeout_ms": 600, "input": "MissionPlan+RoomMap", "output": "PuzzleSpec[]" },
+    { "id": "npc_agent", "state": ["BRIEFING", "COMPLETE"], "timeout_ms": 400, "input": "persona+intent+state", "output": "DialogueLine" },
+    { "id": "adaptation", "state": "ADAPTING", "timeout_ms": 200, "input": "PerformanceSignals", "output": "AdaptationProposal|null" }
+  ]
+}

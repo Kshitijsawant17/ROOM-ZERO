@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ROOM//ZERO</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <p class="mark">ROOM//ZERO</p>
+      <p class="tag">Your room is the game engine.</p>
+    </header>
+    <section id="stage" class="stage">
+      <canvas id="room" width="960" height="540"></canvas>
+      <div id="hud">
+        <div id="title">ZERO is listening</div>
+        <div id="objective"></div>
+        <div id="timer"></div>
+        <div id="alarm-wrap"><span>ALARM</span><i id="alarm"></i></div>
+      </div>
+      <div id="log" class="log"></div>
+    </section>
+    <section class="controls">
+      <button id="btn-mission">Give me a mission</button>
+      <button id="btn-hint">Ask ZERO</button>
+      <button id="btn-scan">Rescan room</button>
+      <label>Room
+        <select id="room-select">
+          <option value="bedroom">Bedroom</option>
+          <option value="office">Office</option>
+        </select>
+      </label>
+    </section>
+    <p class="hint">Click holograms in order. Code pad: type 2046. Wires: click three nodes. Map: click until north snaps.</p>
+  </div>
+  <script src="rooms.js"></script>
+  <script src="engine.js"></script>
+</body>
+</html>

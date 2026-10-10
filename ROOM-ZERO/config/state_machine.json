@@ -1,0 +1,29 @@
+{
+  "initial": "BOOT",
+  "states": {
+    "BOOT": { "timeout_ms": 3000, "on_timeout": "BOOT", "on_error": "BOOT", "specialist": null, "max_retries": 3 },
+    "ROOM_READY": { "timeout_ms": 30000, "on_timeout": "ROOM_READY", "on_error": "ROOM_READY", "specialist": "room_scout", "max_retries": 5 },
+    "MISSION_REQUESTED": { "timeout_ms": 2000, "on_timeout": "PLANNING", "on_error": "ROOM_READY", "specialist": "player_model", "max_retries": 1 },
+    "PLANNING": { "timeout_ms": 1500, "on_timeout": "ROOM_READY", "on_error": "ROOM_READY", "specialist": "game_director", "max_retries": 1 },
+    "VALIDATING": { "timeout_ms": 800, "on_timeout": "PLANNING", "on_error": "PLANNING", "specialist": "puzzle_architect", "max_retries": 1 },
+    "BRIEFING": { "timeout_ms": 8000, "on_timeout": "ACTIVE", "on_error": "ACTIVE", "specialist": "npc_agent", "max_retries": 1 },
+    "ACTIVE": { "timeout_ms": 240000, "on_timeout": "COMPLETE", "on_error": "COMPLETE", "specialist": null, "max_retries": 0 },
+    "ADAPTING": { "timeout_ms": 400, "on_timeout": "ACTIVE", "on_error": "ACTIVE", "specialist": "adaptation", "max_retries": 0 },
+    "COMPLETE": { "timeout_ms": 2000, "on_timeout": "SAVING", "on_error": "SAVING", "specialist": "npc_agent", "max_retries": 0 },
+    "SAVING": { "timeout_ms": 1000, "on_timeout": "READY_FOR_NEXT_SESSION", "on_error": "READY_FOR_NEXT_SESSION", "specialist": "player_model", "max_retries": 0 },
+    "READY_FOR_NEXT_SESSION": { "timeout_ms": 0, "on_timeout": "READY_FOR_NEXT_SESSION", "on_error": "ROOM_READY", "specialist": null, "max_retries": 0 }
+  },
+  "transitions": {
+    "BOOT": ["ROOM_READY"],
+    "ROOM_READY": ["MISSION_REQUESTED", "ROOM_READY"],
+    "MISSION_REQUESTED": ["PLANNING", "ROOM_READY"],
+    "PLANNING": ["VALIDATING", "ROOM_READY"],
+    "VALIDATING": ["BRIEFING", "PLANNING"],
+    "BRIEFING": ["ACTIVE"],
+    "ACTIVE": ["ADAPTING", "COMPLETE"],
+    "ADAPTING": ["ACTIVE"],
+    "COMPLETE": ["SAVING"],
+    "SAVING": ["READY_FOR_NEXT_SESSION"],
+    "READY_FOR_NEXT_SESSION": ["MISSION_REQUESTED", "ROOM_READY"]
+  }
+}

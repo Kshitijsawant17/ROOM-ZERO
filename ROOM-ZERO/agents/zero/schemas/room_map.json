@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RoomMap",
+  "type": "object",
+  "required": ["room_id", "bounds", "playable", "excluded", "ready"],
+  "properties": {
+    "room_id": { "type": "string" },
+    "playable": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["surface_id", "anchor_id", "kind", "confidence"],
+        "properties": {
+          "surface_id": { "type": "string" },
+          "anchor_id": { "type": "string" },
+          "kind": { "type": "string" },
+          "area_m2": { "type": "number" },
+          "confidence": { "type": "string", "enum": ["high", "medium", "low", "unknown"] }
+        }
+      }
+    },
+    "excluded": { "type": "array" },
+    "unknown_count": { "type": "integer" },
+    "ready": { "type": "boolean" }
+  }
+}
