@@ -54,3 +54,6 @@ Thumbs.db
 *.pem
 *.key
 secrets.json
+
+# Runtime session logs
+data/memory/sessions/

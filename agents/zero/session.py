@@ -237,7 +237,7 @@ class ZeroSession:
             speaker="ZERO", intent="HINT", text=proposal.text, state="ADAPTING"
         )
         self.machine.go(SessionState.ACTIVE, reason="adapted")
-        return self.snapshot()
+        return self.snapshot({"adapted": True})
 
     def complete(self, payload: dict[str, Any]) -> dict[str, Any]:
         if self.machine.state == SessionState.ADAPTING:
